@@ -1,0 +1,169 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-01-29 11:59+0300\n"
+"PO-Revision-Date: 2021-01-29 12:02+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:41
+#: include/class-wc-vkontakte-abstracts-settings.php:1068
+msgid "VKontakte"
+msgstr "ВКонтакте"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:42
+msgid "Integration with VKontakte."
+msgstr "Интеграция с ВКонтакте."
+
+#: include/class-wc-vkontakte-abstracts-settings.php:188
+msgid "Authorization settings"
+msgstr "Настройки авторизации"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:195
+msgid "ID application"
+msgstr "ID приложения"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:202
+msgid "Secret key"
+msgstr "Защитный ключ"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:209
+msgid "ID group"
+msgstr "ID сообщества"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:221
+#: include/class-wc-vkontakte-abstracts-settings.php:232
+msgid "Get a tokens"
+msgstr "Получить ключи доступа"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:222
+msgid "Get user token"
+msgstr "Получить ключ доступа пользователя"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:233
+msgid "Get a group token"
+msgstr "Получить ключ доступа сообщества"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:261
+msgid "Subscribe"
+msgstr "Подписаться"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:262
+#: include/class-wc-vkontakte-abstracts-settings.php:272
+msgid "VKontakte events"
+msgstr "События ВКонтакте"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:271
+msgid "Unsubscribe"
+msgstr "Отписаться"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:288
+msgid "Order statuses"
+msgstr "Статусы заказов"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:307
+msgid "Select the default order status"
+msgstr "Выберите статус заказа по умолчанию"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:323
+msgid "Delivery types"
+msgstr "Типы доставок"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:341
+msgid "Choose the default shipping type"
+msgstr "Выберите тип доставки по умолчанию"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:356
+msgid "Payments types"
+msgstr "Типы оплат"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:364
+msgid "Select the default payments type"
+msgstr "Выберите тип оплаты по умолчанию"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:377
+msgid "Import settings"
+msgstr "Настройки импорта"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:384
+#: include/class-wc-vkontakte-abstracts-settings.php:416
+msgid "Item status"
+msgstr "Статус товара"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:389
+msgid "Assign the selected status to the uploaded products"
+msgstr "Присвоить выбранный статус товарам загруженным из ВКонтакте"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:395
+msgid "Enable import"
+msgstr "Включить импорт"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:397
+msgid "Starting a one-time import of goods on a schedule"
+msgstr "Запуск разового импорта товаров по расписанию"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:408
+msgid "Export settings"
+msgstr "Настройки экспорта"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:419
+msgid "Unload goods only with selected statuses"
+msgstr "Отобрать товары с выбранными статусами для экспорта в ВКонтакте"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:426
+msgid "Albums by parent category"
+msgstr "Альбомы по родительской категории"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:435
+msgid "Enable export"
+msgstr "Включить экспорт"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:437
+msgid "Starting permanent export of goods on a schedule"
+msgstr "Запуск постоянного экспорта товаров по графику (1 раз в день)"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:454
+msgid "Export categories"
+msgstr "Категории для экспорта"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:472
+msgid "Selected products"
+msgstr "Товаров выбрано"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:483
+msgid "Error log"
+msgstr "Журнал ошибок"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:689
+msgid "Exceeded the limit on the number of products!"
+msgstr "Превышен лимит на количество товаров!"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:799
+msgid "Clear"
+msgstr "Очистить"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:802
+msgid "Details"
+msgstr "Детали"
+
+#: include/class-wc-vkontakte-abstracts-settings.php:1075
+msgid "Settings"
+msgstr "Настройки"
+
+#: include/class-wc-vkontakte-base.php:223
+msgid ""
+"The log file is too large. Click on the clear button (detailed logs are not "
+"affected)."
+msgstr "Файл журнала ошибок слишком велик. Нажмите на кнопку \"Очистить\"."
+
+#~ msgid "Upload settings"
+#~ msgstr "Настройки загрузки"
