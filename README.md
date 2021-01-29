@@ -1,1 +1,1 @@
-# woocommerce-vk-module-
+# woocommerce-vk-module
