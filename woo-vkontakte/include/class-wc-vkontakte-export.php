@@ -411,7 +411,6 @@ if ( ! class_exists( 'WC_VKontakte_Export' ) ) :
 				$products = $this->get_wc_products_taxonomies( static::$options['item_status_export'], $category['slug'] );
 
 				foreach ( $products as $offer ) {
-
 					if ( ! key_exists( $offer['productId'], $allProducts ) ) {
 						$allProducts[ $offer['productId'] ] = array(
 							'category_ids' => array(
@@ -535,10 +534,10 @@ if ( ! class_exists( 'WC_VKontakte_Export' ) ) :
 				'url'               => ( $product->get_parent_id() > 0 ) ? $parent->get_permalink() : $product->get_permalink(),
 				'quantity'          => is_null( $product->get_stock_quantity() ) ? 0 : $product->get_stock_quantity(),
 				'stock_status'      => $product->get_stock_status(),
-				'dimension_length'  => $product->get_length() != '' ? wc_get_dimension( $product->get_length(), 'cm' ) : null,
-				'dimension_width'   => $product->get_width() != '' ? wc_get_dimension( $product->get_width(), 'cm' ) : null,
-				'dimension_height'  => $product->get_height() != '' ? wc_get_dimension( $product->get_height(), 'cm' ) : null,
-				'weight'            => $product->get_weight() != '' ? wc_get_weight( $product->get_weight(), 'kg' ) : null,
+				'dimension_length'  => $product->get_length() != '' ? wc_get_dimension( $product->get_length(), 'mm' ) : null,
+				'dimension_width'   => $product->get_width() != '' ? wc_get_dimension( $product->get_width(), 'mm' ) : null,
+				'dimension_height'  => $product->get_height() != '' ? wc_get_dimension( $product->get_height(), 'mm' ) : null,
+				'weight'            => $product->get_weight() != '' ? wc_get_weight( $product->get_weight(), 'g' ) : null,
 				'params'            => array()
 			);
 
