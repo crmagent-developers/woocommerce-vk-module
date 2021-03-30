@@ -152,7 +152,7 @@ if ( ! class_exists( 'WC_VK_Order' ) ) :
 			}
 
 			$shipping         = new WC_Order_Item_Shipping();
-			$shipping_methods = get_wc_shipping_methods();
+			$shipping_methods = VK_get_wc_shipping_methods();
 			$shipping->set_method_title( $shipping_methods[ $deliveryCode_WC ]['name'] );
 			$shipping->set_method_id( $deliveryCode_WC );
 

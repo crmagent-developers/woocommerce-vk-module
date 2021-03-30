@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @return mixed|void
  */
-function get_wc_shipping_methods() {
+function VK_get_wc_shipping_methods() {
 	$wc_shipping      = WC_Shipping::instance();
 	$shipping_methods = $wc_shipping->get_shipping_methods();
 

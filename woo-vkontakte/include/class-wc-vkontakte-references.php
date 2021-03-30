@@ -92,7 +92,7 @@ if ( ! class_exists( 'WC_VK_References' ) ) :
 		public function WC_getDeliveryTypes() {
 			$wc_shipping_list = array();
 
-			foreach ( get_wc_shipping_methods() as $shipping_code => $shipping ) {
+			foreach ( VK_get_wc_shipping_methods() as $shipping_code => $shipping ) {
 				if ( isset( $shipping['enabled'] ) && $shipping['enabled'] == WC_VKontakte_Abstracts_Settings::YES ) {
 					$wc_shipping_list[ $shipping_code ] = __( $shipping['title'], 'woocommerce' );
 				}
