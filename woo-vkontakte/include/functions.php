@@ -24,3 +24,31 @@ function VK_get_wc_shipping_methods() {
 
 	return apply_filters( 'retailcrm_shipping_list', WC_VKontakte_Plugin::clearArray( $result ) );
 }
+
+/**
+ * Request for sending statistics
+ *
+ * @param $data
+ *
+ * @return string
+ */
+function VK_push_statistic($data)
+{
+	$data['platform'] = 'woocommerce';
+
+	$ch = curl_init();
+
+	$setopt = [
+		CURLOPT_URL => 'https://dev.crmagent.ru/vk/push',
+		CURLOPT_RETURNTRANSFER => 1,
+		CURLOPT_POST => true,
+		CURLOPT_POSTFIELDS => json_encode($data),
+	];
+
+	curl_setopt_array($ch, $setopt);
+	$response = curl_exec($ch);
+
+	curl_close($ch);
+
+	return $response;
+}

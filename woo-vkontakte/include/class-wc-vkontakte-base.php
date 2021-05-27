@@ -21,6 +21,9 @@ if ( ! class_exists( 'WC_VKontakte_Base' ) ) {
 	 * Class WC_VKontakte_Base
 	 */
 	class WC_VKontakte_Base extends WC_VKontakte_Abstracts_Settings {
+
+		const VK_MODULE_VERSION = '1.0';
+
 		/** @var array */
 		public static $options;
 
@@ -61,6 +64,8 @@ if ( ! class_exists( 'WC_VKontakte_Base' ) ) {
 			$this->model      = new WC_VKontakte_Model();
 			$this->logger     = new WC_VK_Logger();
 
+			$this->pushStatisticActivation();
+
 			// Actions.
 
 			add_action( 'woocommerce_update_options_integration_' . $this->id, array(
@@ -87,6 +92,7 @@ if ( ! class_exists( 'WC_VKontakte_Base' ) ) {
 			// Deactivate hook
 
 			add_action( 'vkontakte_deactivate', array( $this, 'unsubscribe_to_vk_events' ) );
+			add_action( 'vkontakte_deactivate', array( $this, 'pushStatisticDeactivation' ) );
 		}
 
 		/**
@@ -598,6 +604,42 @@ if ( ! class_exists( 'WC_VKontakte_Base' ) ) {
 			$vk_oauth = new VKOAuth();
 
 			return $vk_oauth->getAuthorizeUrl( $response_type, $client_id, $redirect_uri, $display, $scope, $state, $groups_ids );
+		}
+
+		/**
+		 * Send statistics about module activation
+		 */
+		public function pushStatisticActivation() {
+			if ( ! empty( static::$options_oauth['id_group'] )
+			     && (
+				     empty( get_option( 'vkontakte_statistic' ) )
+				     || self::VK_MODULE_VERSION != get_option( 'vkontakte_module_version' )
+			     )
+			) {
+				$statistic = VK_push_statistic( [
+					'shopUrl'  => get_option( 'siteurl' ),
+					'groupId'  => static::$options_oauth['id_group'],
+					'version'  => self::VK_MODULE_VERSION,
+					'isActive' => true
+				] );
+
+				update_option( 'vkontakte_statistic', $statistic );
+				update_option( 'vkontakte_module_version', self::VK_MODULE_VERSION );
+			}
+		}
+
+		/**
+		 * Send statistics about module deactivation
+		 */
+		public function pushStatisticDeactivation() {
+			VK_push_statistic( [
+				'shopUrl'  => get_option( 'siteurl' ),
+				'groupId'  => static::$options_oauth['id_group'],
+				'version'  => self::VK_MODULE_VERSION,
+				'isActive' => false
+			] );
+
+			update_option( 'vkontakte_statistic', 0 );
 		}
 	}
 }

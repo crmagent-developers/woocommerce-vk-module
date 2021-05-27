@@ -29,6 +29,8 @@ $wpdb->query( "DELETE FROM $wpdb->options WHERE option_name = 'vkontakte_oauth_s
 $wpdb->query( "DELETE FROM $wpdb->options WHERE option_name = 'vkontakte_events';" );
 $wpdb->query( "DELETE FROM $wpdb->options WHERE option_name = 'vkontakte_events_code';" );
 $wpdb->query( "DELETE FROM $wpdb->options WHERE option_name = 'vkontakte_db_version';" );
+$wpdb->query( "DELETE FROM $wpdb->options WHERE option_name = 'vkontakte_statistic';" );
+$wpdb->query( "DELETE FROM $wpdb->options WHERE option_name = 'vkontakte_module_version';" );
 
 // Clear any cached data that has been removed
 wp_cache_flush();
