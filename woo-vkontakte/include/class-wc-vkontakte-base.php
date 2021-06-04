@@ -64,7 +64,9 @@ if ( ! class_exists( 'WC_VKontakte_Base' ) ) {
 			$this->model      = new WC_VKontakte_Model();
 			$this->logger     = new WC_VK_Logger();
 
-			$this->pushStatisticActivation();
+			if ( ! empty( static::$token_user ) && ! empty( static::$token_group ) ) {
+				$this->pushStatisticActivation();
+			}
 
 			// Actions.
 
@@ -239,9 +241,9 @@ if ( ! class_exists( 'WC_VKontakte_Base' ) ) {
 			if ( static::$options['import'] === self::YES ) {
 
 				if ( ! function_exists( 'media_sideload_image' ) ) {
-					require_once ABSPATH .  'wp-admin/includes/media.php' ;
-					require_once ABSPATH .  'wp-admin/includes/file.php' ;
-					require_once ABSPATH .  'wp-admin/includes/image.php' ;
+					require_once ABSPATH . 'wp-admin/includes/media.php';
+					require_once ABSPATH . 'wp-admin/includes/file.php';
+					require_once ABSPATH . 'wp-admin/includes/image.php';
 				}
 
 				if ( ! class_exists( 'WC_VKontakte_Import' ) ) {
